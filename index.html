@@ -1,0 +1,22 @@
+<!-- Movable container for iframe -->
+        <div class="movable-container-div hide-the-container" style="position: absolute; z-index: 9; background-color: #FF0000; align-items: center; justify-content: center; text-align: center; top: 20%; left: 70%; transform: translate(-50%, -50%); font-size: larger;">
+            <div class="movable-container-div-header" style="padding: 1px; z-index: 10; background-color: #1B1C2E; display: flex; justify-content: space-between;">
+                <span>WebPhone</span>
+                <span style="margin-right: 10px; cursor: pointer;" class="movable-container-div-minimize">-</span>            
+            </div>
+            <iframe src="https://18.192.125.41//" frameborder="0" allow="camera *;microphone *" style=" width: 50em; height: 30em"></iframe>
+        </div>
+
+  <script>
+    const phoneButton = document.querySelector(".phone-button");
+    const movableContainerDiv = document.querySelector(".movable-container-div");
+    const movableContainerDivMinimizer = document.querySelector(".movable-container-div-minimize");
+    
+    phoneButton.addEventListener('click', () => {
+      movableContainerDiv.classList.remove('hide-the-container');
+    });
+
+    movableContainerDivMinimizer.addEventListener('click', () => {
+        movableContainerDiv.classList.add('hide-the-container');
+    })
+</script>
